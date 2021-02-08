@@ -11,6 +11,8 @@
  * [Stripe-payments](https://stripe.com/)
  * [context](https://reactjs.org/docs/context.html)
  * [useEffect](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects)
- *
- *
+ * [localForage](https://github.com/localForage/localForage)
+ * [Making-Progressive-Web-App](https://create-react-app.dev/docs/making-a-progressive-web-app/)
+ * []
+ * []
  *
