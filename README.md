@@ -64,3 +64,5 @@ Give :star: if you found this project useful.
 Feel free to contact me with any questions via email: [:e-mail:](pryadkamaryna@gmail.com).
 If you'd like to see my other projects, please visit my :octocat: 
 [GitHub.](https://github.com/MarynaPR?tab=repositories)
+
+mongodb+srv://marynaPR:u0WCs2HpYyHEKH8Z@cluster0.qz1rf.mongodb.net/shop-shop?retryWrites=true&w=majority
