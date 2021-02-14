@@ -1,9 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');//replace this with an environment variable (e.g., process.env.STRIPE_KEY).
-
-
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
@@ -72,8 +70,6 @@ const resolvers = {
           images: [`${url}/images/${products[i].image}`]
         });//only shows on heroku
         
-
-
         // generate price id using the product id
         const price = await stripe.prices.create({
           product: product.id,

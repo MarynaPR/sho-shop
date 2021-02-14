@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-// import { useStoreContext } from "../../utils/GlobalState";
 import { useDispatch, useSelector } from 'react-redux';
-
 import { QUERY_CATEGORIES } from "../../utils/queries";
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
 
 function CategoryMenu() {
-
   const dispatch = useDispatch();
   const state = useSelector(state => state);
   const { categories } = state;
@@ -39,7 +36,6 @@ function CategoryMenu() {
       currentCategory: id
     });
   };
-
 
   return (
     <div>

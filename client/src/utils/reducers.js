@@ -1,10 +1,7 @@
-// import { useReducer } from 'react';
-
 import {
     UPDATE_PRODUCTS,
     UPDATE_CATEGORIES,
     UPDATE_CURRENT_CATEGORY,
-    //cart
     ADD_TO_CART,
     ADD_MULTIPLE_TO_CART,
     REMOVE_FROM_CART,
@@ -42,7 +39,6 @@ export const reducer = (state = initialState, action) => {
                 currentCategory: action.currentCategory
             };
 
-        //cart
         case ADD_TO_CART:
             return {
                 ...state,
@@ -95,7 +91,3 @@ export const reducer = (state = initialState, action) => {
     }
 };
 export default reducer;
-
-// export function useProductReducer(initialState) {
-//     return useReducer(reducer, initialState);
-// };

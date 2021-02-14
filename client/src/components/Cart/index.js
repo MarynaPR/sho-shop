@@ -4,9 +4,6 @@ import { idbPromise } from "../../utils/helpers";
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import './style.css';
-//toggle action and global store
-// import { useStoreContext } from '../../utils/GlobalState';
-//stripe functionality
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/react-hooks';
@@ -19,21 +16,18 @@ const Cart = () => {
 
   const dispatch = useDispatch();
   const state = useSelector(state => state);
-
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-  //USEeFFECT
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise('cart', 'get');
       dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
     };
-
     if (!state.cart.length) {
       getCart();
     }
   }, [state.cart.length, dispatch]);
-  // //for STRIPE HOOK
+
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
@@ -42,12 +36,8 @@ const Cart = () => {
     }
   }, [data]);
 
-
-
-  //TOGGLE CART
   function toggleCart() {
     dispatch({ type: TOGGLE_CART });
-
   }
   console.log("STATE", state);
   if (!state.cartOpen) {
@@ -59,7 +49,7 @@ const Cart = () => {
       </div>
     );
   }
-  //TOTAL in CART
+
   function calculateTotal() {
     let sum = 0;
     state.cart.forEach(item => {
@@ -67,7 +57,7 @@ const Cart = () => {
     });
     return sum.toFixed(2);
   }
-  //CHECKOUT
+
   function submitCheckout() {
     const productIds = [];
 
@@ -79,9 +69,6 @@ const Cart = () => {
     getCheckout({
       variables: { products: productIds }
     });
-
-
-
   }
 
   return (

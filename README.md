@@ -2,20 +2,7 @@
 
 ### Description :page_with_curl:
 
-
-This code features refactored e-commerce platform from the module project to use Redux. 
-
-GIVEN an e-commerce platform that uses Redux to manage global state
-WHEN I review the app’s store
-THEN I find that the app uses a Redux store instead of the Context API
-WHEN I review the way the React front end accesses the store
-THEN I find that the app uses a Redux provider
-WHEN I review the way the app determines changes to its global state
-THEN I find that the app passes reducers to a Redux store instead of using the Context API
-WHEN I review the way the app extracts state data from the store
-THEN I find that the app uses Redux instead of the Context API
-WHEN I review the way the app dispatches actions
-THEN I find that the app uses Redux instead of the Context API
+This code features refactored e-commerce platform from the module project using Redux. 
 
 The project is deployed to [Heroku.](https://shopandshop.herokuapp.com/)
 
@@ -28,15 +15,15 @@ The project is deployed to [Heroku.](https://shopandshop.herokuapp.com/)
 
 #### Resources Used :wrench: 
 
- * [useReducer-Hook](https://reactjs.org/docs/hooks-reference.html#usereducer)
- * [Stripe.js](https://stripe.com/docs/stripe-js)
- * [Stripe-payments](https://stripe.com/)
+ * [useReducer-hook](https://reactjs.org/docs/hooks-reference.html#usereducer)
+ * [stripe.js](https://stripe.com/docs/stripe-js)
+ * [stripe-payments](https://stripe.com/)
  * [context](https://reactjs.org/docs/context.html)
  * [useEffect](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects)
  * [localForage](https://github.com/localForage/localForage)
- * [Making-Progressive-Web-App](https://create-react-app.dev/docs/making-a-progressive-web-app/)
- * [React Docs on useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
- * [Accept-payments](https://stripe.com/docs/payments/accept-a-payment)
+ * [making-Progressive-Web-App](https://create-react-app.dev/docs/making-a-progressive-web-app/)
+ * [react docs on useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)
+ * [accept-payments](https://stripe.com/docs/payments/accept-a-payment)
  * [redux](https://redux.js.org/introduction/getting-started)
  * [redux-fundamentals](https://redux.js.org/tutorials/fundamentals/part-1-overview)
 
